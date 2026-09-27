@@ -644,3 +644,19 @@ h2:has(.heading-keep) { font-size: clamp(18px, 2.3vw, 36px); }
 .people-article-section-copy .story-phrase { white-space: nowrap; overflow-wrap: normal; }
 
 .address-unit { white-space: nowrap; }
+
+/* Mobile reading: centered copy and photos before the location map. */
+@media (max-width: 700px) {
+  main :is(h1, h2, h3, p, blockquote, figcaption, address, dt, dd),
+  .site-footer :is(h2, p, address),
+  .home-guide-copy, .timeline-opening, .guogang-ending, .goods-ending, .about-ending { text-align: center; }
+  main p { margin-inline: auto; }
+  .people-article-section-copy p { padding-right: 0; }
+  .people-article-section-copy blockquote { padding-inline: 0; }
+  main .button-row, .home-guide-about .button-row, main .card-actions { justify-content: center; }
+  .people-article-section-marker { text-align: center; }
+  .guogang-map-place-copy { grid-row: 1; }
+  .guogang-map-place-photo { grid-row: 2; }
+  .guogang-map-google { grid-row: 3; }
+  .guogang-map-place-heading { justify-content: center; }
+}
