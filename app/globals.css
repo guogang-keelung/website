@@ -90,8 +90,8 @@ p { text-wrap: pretty; } p:last-child { margin-bottom: 0; }
 .home-feature-single blockquote { margin-bottom: 24px; font-size: 19px; line-height: 1.9; }
 .home-guide-people .home-feature-single { grid-column: 8 / -1; grid-row: 1; }
 .home-guide-people .home-guide-copy { grid-column: 2 / 7; grid-row: 1; padding-top: 60px; }
-.home-guide-about > :is(.image-placeholder, .product-gallery, .home-community-collage) { grid-column: 2 / -1; grid-row: 1; }
-.home-guide-about .home-guide-copy { grid-column: 4 / 11; padding-top: 64px; text-align: center; }
+.home-guide-about > :is(.image-placeholder, .product-gallery, .home-community-collage) { grid-column: 2 / -1; grid-row: 2; margin-top: 64px; }
+.home-guide-about .home-guide-copy { grid-column: 4 / 11; grid-row: 1; padding-top: 0; text-align: center; }
 .home-guide-about .button-row { justify-content: center; }
 .home-more { margin-top: var(--section-space); padding: 80px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1.7fr 1fr; gap: 10%; }
 .home-more-side { align-self: end; }
@@ -393,7 +393,7 @@ p { text-wrap: pretty; } p:last-child { margin-bottom: 0; }
   .home-guide-goods .home-guide-copy { padding: 0; }
   .home-guide-people .home-guide-copy { padding-top: 0; }
   .home-guide-people .home-feature-single { order: 2; width: 85%; margin: 36px 0 0 auto; }
-  .home-guide-about > :is(.image-placeholder, .product-gallery, .home-community-collage) { order: 0; }
+  .home-guide-about > :is(.image-placeholder, .product-gallery, .home-community-collage) { order: 2; margin-top: 32px; }
   .home-guide-about .home-guide-copy { padding-top: 40px; text-align: left; }
   .home-guide-about .button-row { justify-content: flex-start; }
   .home-more { grid-template-columns: 1fr; gap: 48px; padding: 64px 0; }

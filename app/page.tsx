@@ -64,11 +64,6 @@ export default function Home() {
 
         <article className="home-guide home-guide-about">
           <div className="home-guide-number">04</div>
-          <div className="home-community-collage" role="group" aria-label="居民一起關懷長者、整理環境的三張照片">
-            <img src={sitePath("/images/home/revision-20260920/community-care.webp")} width="1400" height="933" alt="居民在社區空間陪伴長者、協助量血壓" loading="lazy" decoding="async" />
-            <img src={sitePath("/images/home/revision-20260920/community-outdoors.webp")} width="800" height="600" alt="居民一起整理竹林環境" loading="lazy" decoding="async" />
-            <img src={sitePath("/images/home/revision-20260920/community-cleanup.webp")} width="800" height="450" alt="志工一起清掃社區街道" loading="lazy" decoding="async" />
-          </div>
           <div className="home-guide-copy">
             <p className="eyebrow">04 / 關於我們</p>
             <h2><HeadingLines lines={["社區的事情，", "就是一件一件一起做。"]} /></h2>
@@ -78,6 +73,11 @@ export default function Home() {
               <a className="button button-primary" href={sitePath("/about")}>認識過港社區發展協會</a>
 
             </div>
+          </div>
+          <div className="home-community-collage" role="group" aria-label="居民一起關懷長者、整理環境的三張照片">
+            <img src={sitePath("/images/home/revision-20260920/community-care.webp")} width="1400" height="933" alt="居民在社區空間陪伴長者、協助量血壓" loading="lazy" decoding="async" />
+            <img src={sitePath("/images/home/revision-20260920/community-outdoors.webp")} width="800" height="600" alt="居民一起整理竹林環境" loading="lazy" decoding="async" />
+            <img src={sitePath("/images/home/revision-20260920/community-cleanup.webp")} width="800" height="450" alt="志工一起清掃社區街道" loading="lazy" decoding="async" />
           </div>
         </article>
 
