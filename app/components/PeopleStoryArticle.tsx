@@ -21,7 +21,7 @@ function StoryFigure({ image, className = "" }: { image: StoryImage; className?:
 
 function StoryBlocks({ blocks }: { blocks: StoryBlock[] }) {
   return blocks.map((block, index) => block.type === "quote" ? (
-    <blockquote key={index}>{block.text.split(/(一天過一天[，。]?[」]?)/g).map((part, partIndex) => part.startsWith("一天過一天") ? <span className="story-phrase" key={partIndex}>{part}</span> : part)}</blockquote>
+    <blockquote key={index}>{block.text.split(/(一天過一天[，。]?[」]?|講不聽停的[！]?[」]?|白木耳露[。]?[」]?|很快樂[。]?[」]?|盡心盡力[。]?[」]?|而已[。]?[」]?|不喜歡[。]?[」]?|害羞[。]?[」]?|很久[。]?[」]?|客人[。]?[」]?|想要做[。]?[」]?)/g).map((part, partIndex) => partIndex % 2 === 1 ? <span className="story-phrase" key={partIndex}>{part}</span> : part)}</blockquote>
   ) : (
     <p key={index}>{block.emphasizedLines ? block.text.split("\n").map((line, lineIndex) => (
       <span key={lineIndex}>{lineIndex > 0 ? "\n" : ""}{block.emphasizedLines!.includes(lineIndex) ? <span className="people-inline-quote">{line}</span> : line}</span>

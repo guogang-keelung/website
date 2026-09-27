@@ -98,7 +98,7 @@ export default function AboutPage() {
       <section className="contact-section" id="contact">
         <div><p className="eyebrow light">CONTACT US</p><h2>與過港保持聯絡</h2><PhoneContact /><PhoneAction /></div>
         <dl>
-          <div><dt>地址</dt><dd>{SITE_CONFIG.address}</dd></div>
+          <div><dt>地址</dt><dd>{SITE_CONFIG.address.slice(0, -4)}<span className="address-unit">{SITE_CONFIG.address.slice(-4)}</span></dd></div>
           <div><dt>電話</dt><dd><a href={`tel:${SITE_CONFIG.phone.replace(/-/g, "")}`}>{SITE_CONFIG.phone}</a></dd></div>
           <div><dt>Facebook</dt><dd><a href={SITE_CONFIG.facebookUrl} target="_blank" rel="noreferrer">前往 Facebook 專頁</a></dd></div>
         </dl>
