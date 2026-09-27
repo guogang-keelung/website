@@ -1,3 +1,4 @@
+import { HistoryGallery } from "./HistoryGallery";
 import { HeadingLines } from "./HeadingLines";
 import { sitePath } from "../utils/sitePath";
 
@@ -38,13 +39,7 @@ export function Timeline({ entries, label }: TimelineProps) {
             </article>
             {entry.images ? (
               <figure className="history-archive">
-                <div className="history-archive-images">
-                  {entry.images.map((image, imageIndex) => <img key={image.src}
-                    src={sitePath(image.src)}
-                    srcSet={`${sitePath(image.src.replace(".webp", "-768.webp"))} 768w, ${sitePath(image.src)} ${image.width}w`}
-                    sizes={imageIndex === 0 ? "(max-width: 900px) 90vw, 50vw" : "(max-width: 700px) 90vw, (max-width: 900px) 30vw, 17vw"}
-                    width={image.width} height={image.height} alt={image.alt} loading="lazy" decoding="async" />)}
-                </div>
+                <HistoryGallery images={entry.images} />
                 <figcaption>{entry.imageSource}</figcaption>
               </figure>
             ) : null}
