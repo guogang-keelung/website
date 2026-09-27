@@ -89,7 +89,7 @@ export default function Home() {
             <div className="button-row">
 
               <a className="button button-outline" href={SITE_CONFIG.facebookUrl} target="_blank" rel="noreferrer">前往 Facebook</a>
-              <a className="button button-outline" href={sitePath("/guogang#guogang-map")}>查看交通資訊</a>
+              <a className="button button-outline" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("過港社區發展協會 基隆市暖暖區過港路54號")}`} target="_blank" rel="noreferrer">查看交通資訊</a>
             </div>
           </div>
           <div className="home-more-side">
