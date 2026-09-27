@@ -637,7 +637,7 @@ export const PEOPLE_STORIES: PeopleStory[] = [
   {
     "slug": "community-volunteer",
     "storyNumber": "04",
-    "name": "親家阿公阿嬤",
+    "name": "順發阿公 × 宜慧阿嬤",
     "role": "一起來過港上課的老夫妻",
     "titleLines": [
       "一天過一天，他們一起走到了現在。"

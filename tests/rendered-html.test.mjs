@@ -330,7 +330,7 @@ test("the editorial system shares typography roles and removes dark photo overla
 test("all six People entries include photographs while preserving the original editorial order", async () => {
   const html = await (await render("/people")).text();
   const cards = [...html.matchAll(/<article class="people-story-card[\s\S]*?<\/article>/g)].map((match) => match[0]);
-  const order = ["林秀英", "黃淑惠", "丁梅花", "清爽 × 阿笑", "謝水錦", "親家阿公阿嬤"];
+  const order = ["林秀英", "黃淑惠", "丁梅花", "清爽 × 阿笑", "謝水錦", "順發阿公 × 宜慧阿嬤"];
   assert.equal(cards.length, 6);
   cards.forEach((card, index) => { assert.ok(card.includes(`>${order[index]}<`)); assert.match(card, /<img\b/); assert.match(card, /people-story-summary/); });
 });
@@ -461,7 +461,7 @@ test("People overview and articles share the approved names and roles", async ()
     ["couple-story-two", "丁梅花", "過港社區訪視組組長"],
     ["couple-story-one", "清爽 × 阿笑", "過港的鬥嘴夫妻"],
     ["community-kitchen-mother", "謝水錦", "過港社區煮飯阿姨"],
-    ["community-volunteer", "親家阿公阿嬤", "一起來過港上課的老夫妻"],
+    ["community-volunteer", "順發阿公 × 宜慧阿嬤", "一起來過港上課的老夫妻"],
   ];
   for (const [slug, name, role] of identities) {
     const html = await (await render(`/people/${slug}`)).text();

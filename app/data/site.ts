@@ -384,3 +384,5 @@ export const HOME_COPY = {
   associationDescription:
     "過港社區發展協會長期陪伴居民，從長者關懷、兒少陪伴，到環境守護與社區活動，把生活中真正需要的事情，一件一件做起來。這些年的累積，不只是讓過港的生活變得更好，也讓更多人願意一起參與、一起把地方往前帶。",
 };
+
+export const PEOPLE_READING_ORDER = ["bottle-cap-grandma", "breakfast-shop-owner", "couple-story-two", "couple-story-one", "community-kitchen-mother", "community-volunteer"];

@@ -68,7 +68,7 @@ export default function GoodsPage() {
       </section>
 
       <section className="goods-ending">
-        <h2><span className="heading-line">一份味道，</span><span className="heading-line">也可以是</span><span className="heading-line">認識地方的開始。</span></h2>
+        <h2><span className="heading-line">一份味道，</span><span className="heading-line heading-keep">也可以是認識地方的開始。</span></h2>
         <p>如果想知道這些好味從什麼樣的地方而來，也歡迎再走進過港，認識生活在這裡的人與故事。</p>
         <div className="button-row">
           <a className="button button-primary" href={sitePath("/guogang")}>認識過港</a>

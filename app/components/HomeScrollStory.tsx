@@ -21,7 +21,7 @@ const STAGES: StoryStage[] = [
     number: "01",
     titleLines: ["這裡是過港。"],
     description: "一個沿著基隆河生活的地方。",
-    imageLabel: "過港河岸、岩石與周邊環境",
+    imageLabel: "過港河岸、壺穴與周邊環境",
     image: "/images/home/updated-20260920/home-scroll-01.webp",
     imageMobile: "/images/home/updated-20260920/home-scroll-01-1280.webp",
     objectPosition: "center center",

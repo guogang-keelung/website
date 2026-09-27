@@ -19,7 +19,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 img { display: block; max-width: 100%; height: auto; }
 figure, blockquote, dl, dd { margin: 0; }
 h1, h2, h3, p { margin: 0 0 1.5rem; }
-h1, h2, h3 { color: var(--ink); font-family: var(--serif); font-weight: 500; line-height: 1.65; letter-spacing: .1em; text-wrap: balance; overflow-wrap: anywhere; }
+h1, h2, h3 { color: var(--ink); font-family: var(--serif); font-weight: 500; line-height: 1.65; letter-spacing: .1em; text-wrap: balance; overflow-wrap: normal; word-break: normal; }
 h1 { font-size: var(--type-page); } h2 { font-size: var(--type-section); } h3 { font-size: var(--type-card); }
 p { text-wrap: pretty; } p:last-child { margin-bottom: 0; }
 .heading-line { display: block; } .heading-unit { display: inline-block; white-space: nowrap; }
@@ -637,3 +637,6 @@ p { text-wrap: pretty; } p:last-child { margin-bottom: 0; }
 .history-gallery-thumbnails button[aria-pressed="true"] { border-color: var(--ink); }
 .history-gallery-thumbnails button:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
 .history-gallery-thumbnails img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
+
+.heading-keep { white-space: nowrap; }
+h2:has(.heading-keep) { font-size: clamp(18px, 2.3vw, 36px); }

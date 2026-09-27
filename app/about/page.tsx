@@ -61,7 +61,7 @@ export default function AboutPage() {
       <section className="about-people-power">
         <div>
           <p className="eyebrow light">PEOPLE MAKE A COMMUNITY</p>
-          <h2><span className="heading-line">很多事情，</span><span className="heading-line">都是從</span><span className="heading-line">「有人願意」開始。</span></h2>
+          <h2><span className="heading-line">很多事情，</span><span className="heading-line heading-keep">都是從「有人願意」開始。</span></h2>
         </div>
         <p>社區裡的活動、課程與服務，背後都有許多居民與志工一起投入。有人準備餐食，有人陪伴長輩，有人照顧孩子，有人整理環境，也有人負責把大家重新聚在一起。每一件事情看起來或許不大，但長時間累積下來，就成為過港持續往前的力量。</p>
       </section>
@@ -69,7 +69,7 @@ export default function AboutPage() {
       <section id="history" className="about-journey" aria-labelledby="about-journey-title">
         <header>
           <p className="eyebrow">OUR JOURNEY</p>
-          <h2 id="about-journey-title"><span className="heading-line">從過港開始，</span><span className="heading-line">把經驗</span><span className="heading-line">慢慢分享出去。</span></h2>
+          <h2 id="about-journey-title"><span className="heading-line">從過港開始，</span><span className="heading-line heading-keep">把經驗慢慢分享出去。</span></h2>
         </header>
         <ol>
           {JOURNEY.map(([year, text]) => <li key={year}><span>{year}</span><strong>{text}</strong></li>)}

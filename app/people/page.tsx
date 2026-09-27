@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { HeadingLines } from "../components/HeadingLines";
 import { PageIntro } from "../components/PageIntro";
 import { PEOPLE_STORY_PHOTOS } from "../data/peopleStoryPhotos";
-import { PEOPLE } from "../data/site";
+import { PEOPLE, PEOPLE_READING_ORDER } from "../data/site";
 import { getPeopleStory } from "../data/peopleStories";
 import { sitePath } from "../utils/sitePath";
 
@@ -92,7 +92,7 @@ const PEOPLE_INDEX_ORDER: IndexEntry[] = [
     "side": "right",
     "offset": 4
   }
-].map((entry) => {
+].sort((a, b) => PEOPLE_READING_ORDER.indexOf(a.slug) - PEOPLE_READING_ORDER.indexOf(b.slug)).map((entry) => {
   const story = getPeopleStory(entry.slug)!;
   return {
     ...entry,

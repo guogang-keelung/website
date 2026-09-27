@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { ImagePlaceholder } from "../../components/ImagePlaceholder";
 import { PeopleStoryArticle } from "../../components/PeopleStoryArticle";
 import { getPeopleStory } from "../../data/peopleStories";
-import { PEOPLE } from "../../data/site";
+import { PEOPLE, PEOPLE_READING_ORDER } from "../../data/site";
 import { sitePath } from "../../utils/sitePath";
 
 type PersonPageProps = { params: Promise<{ slug: string }> };
@@ -23,9 +23,10 @@ export default async function PersonDetailPage({ params }: PersonPageProps) {
   const { slug } = await params;
   const person = PEOPLE.find((item) => item.slug === slug);
   if (!person) notFound();
-  const index = PEOPLE.findIndex((item) => item.slug === slug);
-  const previous = PEOPLE[(index - 1 + PEOPLE.length) % PEOPLE.length];
-  const next = PEOPLE[(index + 1) % PEOPLE.length];
+  const orderedPeople = PEOPLE_READING_ORDER.map(key => PEOPLE.find(item => item.slug === key)!);
+  const index = orderedPeople.findIndex((item) => item.slug === slug);
+  const previous = orderedPeople[(index - 1 + orderedPeople.length) % orderedPeople.length];
+  const next = orderedPeople[(index + 1) % orderedPeople.length];
   const story = getPeopleStory(slug);
 
   if (story) return <PeopleStoryArticle story={story} previous={previous} next={next} />;

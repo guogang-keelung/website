@@ -153,7 +153,7 @@ test("exported pages preserve revision content and interactions", async () => {
   assert.match(people, /過港的樣子，[\s\S]*?藏在不同人的日常裡。/);
 
   const peopleCards = [...people.matchAll(/<article class="people-story-card[\s\S]*?<\/article>/g)].map((match) => match[0]);
-  const peopleOrder = ["林秀英", "黃淑惠", "丁梅花", "清爽 × 阿笑", "謝水錦", "親家阿公阿嬤"];
+  const peopleOrder = ["林秀英", "黃淑惠", "丁梅花", "清爽 × 阿笑", "謝水錦", "順發阿公 × 宜慧阿嬤"];
   assert.equal(peopleCards.length, peopleOrder.length, "exported People page should contain six editorial entries");
   assert.deepEqual(
     peopleCards.map((card) => peopleOrder.find((name) => card.includes(`>${name}<`))),
@@ -167,7 +167,7 @@ test("exported pages preserve revision content and interactions", async () => {
     ["丁梅花", "/people/couple-story-two"],
     ["清爽 × 阿笑", "/people/couple-story-one"],
     ["謝水錦", "/people/community-kitchen-mother"],
-    ["親家阿公阿嬤", "/people/community-volunteer"],
+    ["順發阿公 × 宜慧阿嬤", "/people/community-volunteer"],
   ]) {
     assert.match(people, new RegExp(`${name}[\\s\\S]*?href="[^"]*${href}`));
   }
