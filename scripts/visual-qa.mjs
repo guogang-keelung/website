@@ -101,7 +101,7 @@ for(const gallery of await page.locator('.product-gallery').all()){
  }
 }
 report.interactions.push('every multi-image product gallery next and previous');
-assert.equal(await page.getByRole('link',{name:'電話洽詢',exact:true}).first().getAttribute('href'),'tel:0224588802');report.interactions.push('telephone inquiry link');
+assert.equal(await page.locator('a[href="tel:0224588802"]').first().getAttribute('href'),'tel:0224588802');report.interactions.push('telephone inquiry link');
 const touch=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true});const tp=await touch.newPage();
 await tp.goto(origin+'/guogang',{waitUntil:'networkidle'});await tp.addStyleTag({content:'html{scroll-behavior:auto !important}'});
 const ids=await tp.locator('[data-landmark]').evaluateAll(es=>es.map(e=>e.dataset.landmark));

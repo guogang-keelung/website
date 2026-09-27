@@ -44,7 +44,6 @@ p { text-wrap: pretty; } p:last-child { margin-bottom: 0; }
 .primary-navigation a { display: inline-flex; min-height: 44px; align-items: center; font-size: 15px; letter-spacing: .15em; white-space: nowrap; }
 .primary-navigation a.is-active { border-bottom: 1px solid var(--ink); }
 .nav-index, .menu-toggle { display: none; }
-.header-phone-button { font-size: 13px; padding: 8px 18px; }
 /* Four original photo chapters turn together, one deliberate gesture per page. */
 .home-narrative { --story-height: calc(100svh - var(--story-header-height, 128px)); min-height: var(--story-height); display: grid; grid-template-rows: 1fr auto; }
 .narrative-pages { position: relative; display: grid; min-height: calc(var(--story-height) - 76px); overflow: clip; isolation: isolate; }
@@ -303,7 +302,7 @@ p { text-wrap: pretty; } p:last-child { margin-bottom: 0; }
 .article-body h2 { font-size: var(--type-article-section); }
 /* Closing spread uses Guogang's own mark and real contact information. */
 .site-footer { border-top: 1px solid var(--line); padding: 88px max(var(--page-x), calc((100vw - var(--max)) / 2 + var(--page-x))) 24px; background: var(--paper); }
-.footer-lead { display: grid; grid-template-columns: 1fr auto; column-gap: 64px; align-items: end; padding: 0 7% 80px; }
+.footer-lead { display: grid; grid-template-columns: 1fr; align-items: end; padding: 0 7% 80px; }
 .footer-lead .eyebrow { grid-column: 1 / -1; }
 .footer-lead h2 { margin: 0; }
 .footer-grid { border-top: 1px solid var(--line); padding-top: 48px; display: grid; grid-template-columns: 1.1fr .7fr 1.2fr 1fr; gap: 40px; font-size: 13px; }
@@ -343,7 +342,6 @@ p { text-wrap: pretty; } p:last-child { margin-bottom: 0; }
   .primary-navigation li { border-top: 1px solid var(--line); }
   .primary-navigation a { padding-block: 20px; font-size: 22px; }
   .nav-index { display: inline-block; margin-right: 28px; font-family: var(--sans); font-size: 11px; color: var(--muted); }
-  .header-phone-button { align-self: start; }
   .home-narrative { --story-height: calc(100svh - var(--story-header-height, 112px)); }
   .history-timeline > li, .history-timeline > .history-node-return { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-bottom: 88px; }
   .history-timeline .history-copy, .history-timeline .history-photo { grid-column: 1; grid-row: auto; }
@@ -481,7 +479,7 @@ p { text-wrap: pretty; } p:last-child { margin-bottom: 0; }
   .good-detail-hero { grid-template-columns: 1fr; gap: 40px; padding-top: 12px; }
   .article-body { grid-template-columns: 1fr; gap: 40px; padding: 48px 0 64px; }
   .footer-lead { grid-template-columns: 1fr; gap: 0; padding-bottom: 48px; }
-  .footer-lead h2 { margin-bottom: 32px; }
+  .footer-lead h2 { margin-bottom: 0; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px 24px; }
   .footer-grid > :nth-child(3), .footer-social { grid-column: 1 / -1; }
   .footer-grid > div:first-child > p { max-width: 9em; }

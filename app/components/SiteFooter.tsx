@@ -1,6 +1,5 @@
 import { NAV_ITEMS, SITE_CONFIG } from "../data/site";
 import { sitePath } from "../utils/sitePath";
-import { PhoneAction } from "./PhoneAction";
 import { HeadingLines } from "./HeadingLines";
 
 export function SiteFooter() {
@@ -9,7 +8,7 @@ export function SiteFooter() {
       <div className="footer-lead">
         <p className="eyebrow light">KEEP THE STORY GOING</p>
         <h2><HeadingLines lines={["從一個地方的名字開始，", "慢慢認識過港。"]} /></h2>
-        <PhoneAction />
+
       </div>
       <div className="footer-grid">
         <div>

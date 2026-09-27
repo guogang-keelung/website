@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { HomeScrollStory } from "./components/HomeScrollStory";
 import { HeadingLines } from "./components/HeadingLines";
 import { ImagePlaceholder } from "./components/ImagePlaceholder";
-import { PhoneAction, PhoneContact } from "./components/PhoneAction";
+import { PhoneContact } from "./components/PhoneAction";
 import { SITE_CONFIG } from "./data/site";
 import { sitePath } from "./utils/sitePath";
 
@@ -76,7 +76,7 @@ export default function Home() {
             <p>也讓更多人有機會一起參與，一起把生活的地方照顧好。</p>
             <div className="button-row">
               <a className="button button-primary" href={sitePath("/about")}>認識過港社區發展協會</a>
-              <PhoneAction />
+
             </div>
           </div>
         </article>
@@ -87,7 +87,7 @@ export default function Home() {
             <h2 id="home-more-title"><HeadingLines lines={["如果喜歡過港，", "也歡迎把這份味道帶回家。"]} /></h2>
             <PhoneContact />
             <div className="button-row">
-              <PhoneAction />
+
               <a className="button button-outline" href={SITE_CONFIG.facebookUrl} target="_blank" rel="noreferrer">前往 Facebook</a>
               <a className="button button-outline" href={sitePath("/guogang#guogang-map")}>查看交通資訊</a>
             </div>

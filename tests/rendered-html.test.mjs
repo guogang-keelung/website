@@ -202,7 +202,7 @@ test("contact actions use the existing community telephone", async () => {
   const response = await render("/");
   const html = await response.text();
   assert.match(html, /href="tel:0224588802"/);
-  assert.match(html, /電話洽詢/);
+  assert.doesNotMatch(html, /class="button button-phone/);
   assert.doesNotMatch(html, /line\.me|lin\.ee/i);
 });
 

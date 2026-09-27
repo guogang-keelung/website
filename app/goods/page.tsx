@@ -38,9 +38,6 @@ export default function GoodsPage() {
               <div className="catalog-story">
                 <p>{good.story}</p>
               </div>
-              <div className="card-actions">
-                <PhoneAction />
-              </div>
             </div>
           </article>
         ))}

@@ -323,7 +323,8 @@ test("exported HTML contains no online ordering or messaging contact remnants", 
     assert.doesNotMatch(html, /\bLINE\b|賣貨便|線上訂購|線上下單|立即訂購|立即購買|下單|購買|line\.me|lin\.ee|myship\.7-11|shopee/, file);
     if (file.endsWith("index.html") && !/http-equiv="refresh"/i.test(html)) {
       assert.match(html, /href="tel:0224588802"/, file);
-      assert.match(html, /電話洽詢/, file);
+      const buttons = html.match(/class="button button-phone"/g) ?? [];
+      assert.equal(buttons.length, /^(goods|about)[\\/]index\.html$/.test(file) ? 1 : 0, `${file}: keep inquiry buttons only in dedicated contact sections`);
     }
   }
 });

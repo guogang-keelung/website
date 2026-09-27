@@ -2,7 +2,6 @@
 import { useEffect, useRef, useState } from "react";
 import { NAV_ITEMS } from "../data/site";
 import { sitePath, stripSiteBasePath } from "../utils/sitePath";
-import { PhoneAction } from "./PhoneAction";
 
 export function SiteHeader() {
   const [pathname, setPathname] = useState("");
@@ -40,7 +39,7 @@ export function SiteHeader() {
               <span className="nav-index" aria-hidden="true">0{index + 1}</span>{item.label}
             </a></li>;
           })}</ul>
-          <PhoneAction className="button button-phone header-phone-button" />
+
         </nav>
       </div>
     </header>

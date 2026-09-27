@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { PhoneAction, PhoneContact } from "../../components/PhoneAction";
+import { PhoneContact } from "../../components/PhoneAction";
 import { ProductGallery } from "../../components/ProductGallery";
 import { GOODS } from "../../data/site";
 import { sitePath } from "../../utils/sitePath";
@@ -27,7 +27,7 @@ export default async function GoodDetailPage({ params }: GoodPageProps) {
           <p className="eyebrow">GUOGANG GOODS / {String(index + 1).padStart(2, "0")}</p>
           <h1>{good.name}</h1>
           <p>{good.summary}</p>
-          <PhoneAction />
+
         </div>
         <ProductGallery images={[good.coverImage, ...good.galleryImages]} name={good.name} ratio="landscape" tone="clay" />
       </header>
