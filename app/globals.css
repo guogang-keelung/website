@@ -640,3 +640,5 @@ p { text-wrap: pretty; } p:last-child { margin-bottom: 0; }
 
 .heading-keep { white-space: nowrap; }
 h2:has(.heading-keep) { font-size: clamp(18px, 2.3vw, 36px); }
+
+.people-article-section-copy .story-phrase { white-space: nowrap; overflow-wrap: normal; }

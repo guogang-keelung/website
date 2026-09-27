@@ -21,7 +21,7 @@ function StoryFigure({ image, className = "" }: { image: StoryImage; className?:
 
 function StoryBlocks({ blocks }: { blocks: StoryBlock[] }) {
   return blocks.map((block, index) => block.type === "quote" ? (
-    <blockquote key={index}>{block.text}</blockquote>
+    <blockquote key={index}>{block.text.split(/(一天過一天[，。]?[」]?)/g).map((part, partIndex) => part.startsWith("一天過一天") ? <span className="story-phrase" key={partIndex}>{part}</span> : part)}</blockquote>
   ) : (
     <p key={index}>{block.emphasizedLines ? block.text.split("\n").map((line, lineIndex) => (
       <span key={lineIndex}>{lineIndex > 0 ? "\n" : ""}{block.emphasizedLines!.includes(lineIndex) ? <span className="people-inline-quote">{line}</span> : line}</span>
