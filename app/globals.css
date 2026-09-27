@@ -661,3 +661,15 @@ h2:has(.heading-keep) { font-size: clamp(18px, 2.3vw, 36px); }
   .guogang-map-google { grid-row: 3; }
   .guogang-map-place-heading { justify-content: flex-start; }
 }
+
+/* Center the mobile reading column itself, including chapter numbers and headings. */
+@media (max-width: 700px) {
+  .people-article-content > .people-article-section,
+  .people-article-content > .people-article-ending {
+    width: calc(100% - 32px);
+    max-width: 32em;
+    margin-inline: auto;
+  }
+  .people-article-section-copy { width: 100%; }
+  .people-article-section-copy :is(h2, p, blockquote) { text-align: left; }
+}
