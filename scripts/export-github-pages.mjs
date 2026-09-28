@@ -88,6 +88,8 @@ for (const route of routes) {
 
   let html = await response.text();
   html = rewriteMetadataUrls(html);
+  const canonicalUrl = `${siteBaseUrl}${route === "/" ? "/" : `${route}/`}`;
+  html = html.replace("</head>", `<link rel="canonical" href="${canonicalUrl}"><meta property="og:url" content="${canonicalUrl}"></head>`);
   // One complete, route-specific font replaces dozens of overlapping network requests.
   const font = pageFonts[route];
   if (!font) throw new Error(`Missing page font for ${route}`);

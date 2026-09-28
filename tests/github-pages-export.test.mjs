@@ -328,3 +328,17 @@ test("exported HTML contains no online ordering or messaging contact remnants", 
     }
   }
 });
+
+
+test("public pages identify their canonical URL and serve the community icon", async () => {
+  const xml = await read("sitemap.xml");
+  for (const [, url] of xml.matchAll(/<loc>([^<]+)<\/loc>/g)) {
+    const relative = new URL(url).pathname.slice(basePath.length).replace(/^\//, "");
+    const html = await read(`${relative}index.html`);
+    assert.equal((html.match(/rel="canonical"/g) ?? []).length, 1);
+    assert.ok(html.includes(`<link rel="canonical" href="${url}">`));
+    assert.ok(html.includes(`<meta property="og:url" content="${url}">`));
+    assert.ok(html.includes(`${basePath}/favicon.svg`));
+  }
+  assert.match(await read("favicon.svg"), /data:image\/png;base64,/);
+});

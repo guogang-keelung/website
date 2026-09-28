@@ -46,9 +46,7 @@ export const SITE_CONFIG = {
   logoImage: "/images/guogang-logo.webp",
   address: "205 基隆市暖暖區過港里過港路 54 號",
   phone: "02-2458-8802",
-  email: "待提供",
   facebookUrl: "https://www.facebook.com/share/1DmgQHQY5Z/?mibextid=wwXIfr",
-  instagramUrl: "",
 };
 
 export const NAV_ITEMS = [
@@ -56,33 +54,6 @@ export const NAV_ITEMS = [
   { label: "人與過港", href: "/people" },
   { label: "過港好味", href: "/goods" },
   { label: "關於我們", href: "/about" },
-];
-
-export const GUOGANG_TOPICS = [
-  {
-    number: "01",
-    title: "過港在哪裡",
-    summary: "此處將介紹過港的位置與地方環境，正式內容待補。",
-    image: "過港環境照片｜建議比例 4:3",
-  },
-  {
-    number: "02",
-    title: "「過港」這個名字",
-    summary: "此處將整理過港名稱的由來與地方記憶，正式內容待補。",
-    image: "地方歷史照片｜建議比例 3:2",
-  },
-  {
-    number: "03",
-    title: "地方的歷史",
-    summary: "此處將依據正式史料梳理地方發展，正式內容待補。",
-    image: "地方歷史照片｜建議比例 3:2",
-  },
-  {
-    number: "04",
-    title: "現在的過港",
-    summary: "此處將記錄此刻的生活景色與地方日常，正式內容待補。",
-    image: "今日過港照片｜建議比例 4:3",
-  },
 ];
 
 export const GUOGANG_TIMELINE = [
