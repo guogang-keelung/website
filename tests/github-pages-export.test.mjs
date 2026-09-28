@@ -340,5 +340,5 @@ test("public pages identify their canonical URL and serve the community icon", a
     assert.ok(html.includes(`<meta property="og:url" content="${url}">`));
     assert.ok(html.includes(`${basePath}/favicon.svg`));
   }
-  assert.match(await read("favicon.svg"), /data:image\/png;base64,/);
+  assert.match(await read("favicon.svg"), /data:image\/webp;base64,/);
 });
