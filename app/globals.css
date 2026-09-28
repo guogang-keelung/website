@@ -685,3 +685,13 @@ h2:has(.heading-keep) { font-size: clamp(18px, 2.3vw, 36px); }
     text-wrap: pretty;
   }
 }
+
+/* Website information follows the existing about-page editorial grid. */
+.site-information { border-top: 1px solid var(--line); scroll-margin-top: 120px; }
+.site-information h2 { overflow-wrap: normal; }
+.site-information-date { color: var(--muted); font-size: 14px; }
+.site-information-copy { min-width: 0; }
+.site-information-copy section + section { margin-top: 40px; }
+.site-information-copy h3 { font-size: var(--type-card); margin: 0 0 20px; }
+.site-information-copy p { margin: 0 0 20px; }
+.site-information-copy a { text-decoration: underline; text-underline-offset: 4px; }

@@ -28,9 +28,9 @@ export function SiteFooter() {
           <a href={SITE_CONFIG.facebookUrl} target="_blank" rel="noreferrer">Facebook｜前往專頁</a>
         </div>
       </div>
-      <div className="footer-bottom" id="site-info">
+      <div className="footer-bottom">
         <span>© {new Date().getFullYear()} 過港</span>
-        <a href={sitePath("/about#site-info")}>網站資訊與隱私權｜內容待提供</a>
+        <a href={sitePath("/about#site-info")}>網站資訊與隱私權</a>
       </div>
     </footer>
   );

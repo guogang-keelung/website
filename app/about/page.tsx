@@ -103,6 +103,38 @@ export default function AboutPage() {
           <div><dt>Facebook</dt><dd><a href={SITE_CONFIG.facebookUrl} target="_blank" rel="noreferrer">前往 Facebook 專頁</a></dd></div>
         </dl>
       </section>
+      <section className="about-journey site-information" id="site-info" aria-labelledby="site-info-title">
+        <header>
+          <p className="eyebrow">ABOUT THIS WEBSITE</p>
+          <h2 id="site-info-title">網站資訊與隱私權</h2>
+          <p className="site-information-date">更新日期｜2026 年 9 月 29 日</p>
+        </header>
+        <div className="site-information-copy">
+          <section>
+            <h3>網站與聯絡窗口</h3>
+            <p>本網站介紹基隆市暖暖區過港社區發展協會、地方故事與社區特色商品。如有網站內容、照片或隱私相關問題，請聯絡過港社區發展協會。</p>
+            <p>聯絡電話｜<a href={`tel:${SITE_CONFIG.phone.replace(/-/g, "")}`}>{SITE_CONFIG.phone}</a><br />地址｜{SITE_CONFIG.address}</p>
+          </section>
+          <section>
+            <h3>人物故事與資料來源</h3>
+            <p>六篇人物故事由參與「蹲點・台灣」的學生林品均、李佩璇採訪、撰寫與製作，整理自十八天的訪談、走訪與實際相處。其他資料如有來源標示，請參閱各頁說明。</p>
+          </section>
+          <section>
+            <h3>文章與照片的使用</h3>
+            <p>歡迎分享本網站連結。如需轉載文章或使用照片，請先聯絡協會確認使用方式與授權；各項內容的權利仍屬原權利人。如發現內容有誤，或照片涉及您的權益，也歡迎來電告知。</p>
+          </section>
+          <section>
+            <h3>瀏覽資料與隱私</h3>
+            <p>本網站目前不設會員註冊或資料填寫表單，也未安裝流量分析或廣告追蹤工具。網站程式本身未設定 Cookie，亦未使用瀏覽器儲存空間記錄訪客資料。</p>
+            <p>網站由 GitHub Pages 提供託管服務。瀏覽時，服務提供者可能處理 IP 位址、瀏覽器資訊與連線紀錄等技術資料，詳見 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noreferrer">GitHub 隱私權聲明</a>。</p>
+          </section>
+          <section>
+            <h3>地圖與外部網站</h3>
+            <p>開啟互動地圖的地點資訊時，頁面會載入 Google 地圖，並向 Google 傳送連線所需資訊；Google 可能使用 Cookie 或處理相關資料，詳見 <a href="https://policies.google.com/privacy?hl=zh-TW" target="_blank" rel="noreferrer">Google 隱私權政策</a>。</p>
+            <p>點擊 Facebook、資料來源或其他外部連結後，將前往第三方網站，其資料處理方式依各網站的隱私權政策辦理。本說明會隨網站功能調整而更新。</p>
+          </section>
+        </div>
+      </section>
     </main>
   );
 }
