@@ -30,7 +30,7 @@ export function SiteFooter() {
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} 過港</span>
-        <a href={sitePath("/about#site-info")}>網站資訊與隱私權</a>
+        <a href={sitePath("/about#site-info")}>網站資訊</a>
       </div>
     </footer>
   );

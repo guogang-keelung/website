@@ -686,12 +686,9 @@ h2:has(.heading-keep) { font-size: clamp(18px, 2.3vw, 36px); }
   }
 }
 
-/* Website information follows the existing about-page editorial grid. */
-.site-information { border-top: 1px solid var(--line); scroll-margin-top: 120px; }
-.site-information h2 { overflow-wrap: normal; }
-.site-information-date { color: var(--muted); font-size: 14px; }
-.site-information-copy { min-width: 0; }
-.site-information-copy section + section { margin-top: 40px; }
-.site-information-copy h3 { font-size: var(--type-card); margin: 0 0 20px; }
-.site-information-copy p { margin: 0 0 20px; }
-.site-information-copy a { text-decoration: underline; text-underline-offset: 4px; }
+/* Compact reference information at the end of the about page. */
+.site-information { width: min(calc(100% - var(--page-x) * 2), 760px); margin: 0 auto; padding: 32px 0 48px; border-top: 1px solid var(--line); scroll-margin-top: 120px; color: var(--muted); }
+.site-information h2 { font-size: 16px; line-height: 1.6; letter-spacing: .06em; margin: 0 0 16px; }
+.site-information p { font-size: 14px; line-height: 1.9; letter-spacing: .02em; margin: 0 0 12px; }
+.site-information p:last-child { margin-bottom: 0; }
+.site-information a { text-decoration: underline; text-underline-offset: 3px; }
