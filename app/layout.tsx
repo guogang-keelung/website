@@ -22,15 +22,15 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
       locale: "zh_TW",
       siteName: "過港",
-      title: "過港｜地方、人物與生活的故事",
+      title: "基隆市暖暖區過港社區發展協會",
       description: "走進過港，看見地方與人的生活。",
-      images: [{ url: `${siteUrl}${sitePath("/og-revision.png")}`, width: 1730, height: 909, alt: "過港｜地方、人物與生活" }],
+      images: [{ url: `${siteUrl}${sitePath("/images/guogang-header-logo.png")}`, width: 739, height: 351, alt: "過港社區發展協會 Logo" }],
     },
     twitter: {
       card: "summary_large_image",
-      title: "過港｜地方、人物與生活的故事",
+      title: "基隆市暖暖區過港社區發展協會",
       description: "走進過港，看見地方與人的生活。",
-      images: [`${siteUrl}${sitePath("/og-revision.png")}`],
+      images: [`${siteUrl}${sitePath("/images/guogang-header-logo.png")}`],
     },
   };
 }
