@@ -14,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(siteUrl),
     title: {
-      default: "過港｜地方、人物與生活的故事",
+      default: "基隆市暖暖區過港社區發展協會",
       template: "%s｜過港",
     },
     description: "從河岸的名字、過港好味、人物與社區生活，慢慢認識過港。",
@@ -24,13 +24,13 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "過港",
       title: "基隆市暖暖區過港社區發展協會",
       description: "走進過港，看見地方與人的生活。",
-      images: [{ url: `${siteUrl}${sitePath("/images/guogang-header-logo.png")}`, width: 739, height: 351, alt: "過港社區發展協會 Logo" }],
+      images: [{ url: `${siteUrl}${sitePath("/images/guogang-share-logo-v2.jpg")}`, width: 1200, height: 1200, alt: "過港社區發展協會 Logo" }],
     },
     twitter: {
       card: "summary_large_image",
       title: "基隆市暖暖區過港社區發展協會",
       description: "走進過港，看見地方與人的生活。",
-      images: [`${siteUrl}${sitePath("/images/guogang-header-logo.png")}`],
+      images: [`${siteUrl}${sitePath("/images/guogang-share-logo-v2.jpg")}`],
     },
   };
 }

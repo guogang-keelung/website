@@ -7,7 +7,7 @@ import { SITE_CONFIG } from "./data/site";
 import { sitePath } from "./utils/sitePath";
 
 export const metadata: Metadata = {
-  title: { absolute: "過港｜地方、人物與生活的故事" },
+  title: { absolute: "基隆市暖暖區過港社區發展協會" },
   description: "從河岸的名字、過港好味與居民日常，慢慢認識過港。",
 };
 
