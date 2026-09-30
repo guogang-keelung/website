@@ -13,6 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase: new URL(siteUrl),
+    verification: { google: "7F8276EnF-3ueQvWobZuso6Um-YHP4BPS8Ya6NTzy4Q" },
     icons: { icon: [{ url: sitePath("/favicon.svg"), type: "image/svg+xml" }] },
     title: {
       default: "基隆市暖暖區過港社區發展協會",
