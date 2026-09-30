@@ -342,3 +342,12 @@ test("public pages identify their canonical URL and serve the community icon", a
   }
   assert.match(await read("favicon.svg"), /data:image\/webp;base64,/);
 });
+
+
+test("Google verification is in the initial HTML head, without JavaScript", async () => {
+  const html = await read("index.html");
+  const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1];
+  assert.ok(head);
+  assert.equal((html.match(/<meta\b[^>]*name="google-site-verification"[^>]*>/g) ?? []).length, 1);
+  assert.match(head, /<meta name="google-site-verification" content="7F8276EnF-3ueQvWobZuso6Um-YHP4BPS8Ya6NTzy4Q"\s*\/?>/);
+});

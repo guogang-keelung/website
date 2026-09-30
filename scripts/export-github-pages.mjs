@@ -88,6 +88,10 @@ for (const route of routes) {
 
   let html = await response.text();
   html = rewriteMetadataUrls(html);
+  // Verification crawlers read the initial head, not React's streamed metadata.
+  const verificationTags = html.match(/<meta\b[^>]*name="google-site-verification"[^>]*>/g) ?? [];
+  if (verificationTags.length !== 1) throw new Error(`Expected one Google verification tag on ${route}`);
+  html = html.replace(verificationTags[0], "").replace("</head>", `${verificationTags[0]}</head>`);
   const canonicalUrl = `${siteBaseUrl}${route === "/" ? "/" : `${route}/`}`;
   html = html.replace("</head>", `<link rel="canonical" href="${canonicalUrl}"><meta property="og:url" content="${canonicalUrl}"></head>`);
   // One complete, route-specific font replaces dozens of overlapping network requests.
